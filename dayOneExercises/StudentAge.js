@@ -20,3 +20,15 @@ console.log(sum)
 
 let average = sum /2;
 console.log(average)
+
+let maxMinusMin = maxAge - minAge;
+console.log("Max - Min of age "+ maxMinusMin)
+
+let minMinusMax = minAge - maxAge;
+console.log("Min - Max of age "+ minMinusMax)
+
+let minMinusAverage = Math.abs(minAge - average)
+console.log("Min - Average of age "+ minMinusAverage);
+
+let maxMinusAverage = Math.abs(maxAge - average)
+console.log("Max - Average of age "+ maxMinusAverage);
