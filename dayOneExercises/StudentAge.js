@@ -11,3 +11,12 @@ if(sorted.length %2 === 0){
     console.log(sorted[median]);
 }
 console.log(median)
+
+let sum = 0;
+for(let i = 0; i < sorted.length; i++){
+    sum += ages[i];
+}
+console.log(sum)
+
+let average = sum /2;
+console.log(average)
