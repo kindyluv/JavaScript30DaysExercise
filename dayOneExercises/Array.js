@@ -43,3 +43,8 @@ console.log(array.reverse())
 console.log(array.slice(0,3))
 console.log(array.slice(-3))
 console.log(array.slice(-6,-5))
+
+console.log(array.splice(0,1))
+console.log(array.splice(4,2))
+console.log(array.splice(-1,1))
+console.log(array.splice(0,10))
