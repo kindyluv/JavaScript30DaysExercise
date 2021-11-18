@@ -31,4 +31,12 @@ console.log(array)
 
 let index = array.indexOf('FACEBOOK');
 index !== -1 ? console.log("the company exist") : console.log("company doesnt exist");
+console.log(array.includes("OO"));
+
+
+console.log(array.join(' , '))
+
+let sortedArray = array.sort();
+console.log(sortedArray.join(' , '));
+console.log(array.reverse())
 
