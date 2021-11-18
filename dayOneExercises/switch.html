@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<p>Click the button to display a dialog box which will ask what today is </p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+    function myFunction() {
+        let text;
+        let userDayInput = prompt('What day is today?');
+        let day = userDayInput.toLowerCase()
+
+        switch(day){
+            case 'monday':
+                text=('Today is Monday');
+                break
+            case 'tuesday':
+                text=('Today is Tuesday')
+                break
+            case 'wednesday':
+                text=('Today is Wednesday')
+                break
+            case 'thursday':
+                text=('Today is Thursday')
+                break
+            case 'friday':
+                text=('Today is Friday')
+                break
+            case 'saturday':
+                text=('Today is Saturday')
+                break
+            case 'sunday':
+                text=('Today is Sunday')
+                break
+            default:
+                text=('It is not a week day.')
+        }
+
+    document.getElementById("demo").innerHTML = text;
+    }
+</script>
+</body>
+</html>
