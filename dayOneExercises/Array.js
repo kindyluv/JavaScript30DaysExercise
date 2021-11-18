@@ -40,3 +40,6 @@ let sortedArray = array.sort();
 console.log(sortedArray.join(' , '));
 console.log(array.reverse())
 
+console.log(array.slice(0,3))
+console.log(array.slice(-3))
+console.log(array.slice(-6,-5))
