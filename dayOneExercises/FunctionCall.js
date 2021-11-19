@@ -110,3 +110,21 @@ const keys = Object.keys(copyPerson)
 console.log(keys) //['name', 'age', 'country', 'skills', 'address', 'getPersonInfo']
 const address = Object.keys(copyPerson.address)
 console.log(address) //['street', 'pobox', 'city']
+
+//fullName function
+const  favour = getFullName = (first_name, last_name) => {
+    return `${first_name} ${last_name}`;
+};
+
+console.log(favour("lois", "presh"))
+
+//addition
+const addition = function (a , b){
+    return a * b;
+}
+console.log(addition())
+
+// Area of a circle
+const AreaOfACircle = ()=>{
+
+}
