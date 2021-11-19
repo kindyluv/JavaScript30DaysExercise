@@ -70,12 +70,11 @@ personz.getPersonInfo = function () {
 
     let skills = `${skillsWithoutLastSkill}, and ${lastSkill}`
     let fullName = this.getFullName()
-    let statement = `${fullName} is a ${this.title}.\nHe lives in ${this.country}.\nHe teaches ${skills}.`
-    return statement
+    return `${fullName} is a ${this.title}.\nHe lives in ${this.country}.\nHe teaches ${skills}.`
 }
 console.log(personz)
 console.log(personz.getPersonInfo())
-/*Asabeneh Yetayeh is a teacher.
+/*Lois is a teacher.
     He lives in Finland.
     He teaches HTML, CSS, JavaScript, React, Node, MongoDB, Python, D3.js, Meteor, and SasS.
     Object Methods
@@ -84,15 +83,16 @@ There are different methods to manipulate an object. Let us see some of the avai
     Object.assign: To copy an object without modifying the original object*/
 
 const person = {
-    firstName: 'Asabeneh',
+    firstName: 'Lois',
+    lastName: 'Precious',
     age: 250,
     country: 'Finland',
     city: 'Helsinki',
     skills: ['HTML', 'CSS', 'JS'],
     title: 'teacher',
     address: {
-        street: 'Heitamienkatu 16',
-        pobox: 2002,
+        street: 'Steve 16',
+        box: 2002,
         city: 'Helsinki',
     },
     getPersonInfo: function () {
@@ -109,7 +109,7 @@ console.log('copy',copyPerson)
 const keys = Object.keys(copyPerson)
 console.log(keys) //['name', 'age', 'country', 'skills', 'address', 'getPersonInfo']
 const address = Object.keys(copyPerson.address)
-console.log(address) //['street', 'pobox', 'city']
+console.log(address) //['street', 'box', 'city']
 
 //fullName function
 const  favour = getFullName = (first_name, last_name) => {
@@ -120,30 +120,26 @@ console.log(favour("lois", "presh"))
 
 //addition
 const addition = (a , b)=>{
-    let sum= a * b;
-    return sum;
+    return a * b;
 }
 console.log(addition(5,9))
 
 // Area of a circle
 const AreaOfACircle = (radius)=> {
-    let area = Math.PI * (radius * radius)
-return area;
+    return Math.PI * (radius * radius);
 }
 
 console.log(AreaOfACircle(20))
 
 //temperature converter  (32°F − 32) × 5/9 = 0°C
 const temperatureConverterCelsiusToFahrenheit = (oF) =>{
-    let oC = (32*oF - 32) * 5/9
-    return oC;
+    return (32 * oF - 32) * 5 / 9;
 }
 
 console.log(temperatureConverterCelsiusToFahrenheit(25))
 
 const temperatureConverterFahrenheitToCelsius = (oC) =>{
-    let oF = (oC * 9/5) + 32
-    return oF;
+    return (oC * 9 / 5) + 32;
 }
 
 console.log(temperatureConverterFahrenheitToCelsius(25))
