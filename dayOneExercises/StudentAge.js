@@ -1,3 +1,6 @@
+import countriesArray from 'Countries.js';
+import web_techArray from 'dayOneExercises/web_techs.js';
+
 const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24]
 
 let sorted = ages.sort()
@@ -32,3 +35,5 @@ console.log("Min - Average of age "+ minMinusAverage);
 
 let maxMinusAverage = Math.abs(maxAge - average)
 console.log("Max - Average of age "+ maxMinusAverage);
+
+let sliceCountry = countriesArray.slice(-1)
