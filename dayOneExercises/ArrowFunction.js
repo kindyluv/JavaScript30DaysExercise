@@ -250,4 +250,3 @@ const average = (list) =>{
 const array = [21,30,60,44,27,19,48,14,23]
 console.log(average(array));
 
- 
