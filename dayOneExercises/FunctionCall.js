@@ -19,12 +19,12 @@ const persons = {
     },
     'phoneNumber': '+123456789',
 }
-console.log(persons.firstName + ' ' + persons.lastName)
-console.log(persons.age)
-console.log(persons.country)
-console.log(persons.city)
-console.log(persons.phoneNumber)
-console.log(persons.getFullName())
+// console.log(persons.firstName + ' ' + persons.lastName)
+// console.log(persons.age)
+// console.log(persons.country)
+// console.log(persons.city)
+// console.log(persons.phoneNumber)
+// console.log(persons.getFullName())
 
 persons.nationality = 'Ethiopian'
 persons.country = 'Finland'
@@ -33,7 +33,7 @@ persons.skills.push('Meteor')
 persons.skills.push('SasS')
 persons.isMarried = true
 
-console.log(persons)
+// console.log(persons)
 
 const personz = {
     firstName: 'Asabeneh',
@@ -73,8 +73,8 @@ personz.getPersonInfo = function () {
     let statement = `${fullName} is a ${this.title}.\nHe lives in ${this.country}.\nHe teaches ${skills}.`
     return statement
 }
-console.log(personz)
-console.log(personz.getPersonInfo())
+// console.log(personz)
+// console.log(personz.getPersonInfo())
 /*Asabeneh Yetayeh is a teacher.
     He lives in Finland.
     He teaches HTML, CSS, JavaScript, React, Node, MongoDB, Python, D3.js, Meteor, and SasS.
@@ -104,26 +104,26 @@ const person = {
 //hasOwnProperty
 
 const copyPerson = Object.assign({}, person)
-console.log('copy',copyPerson)
+// console.log('copy',copyPerson)
 
 const keys = Object.keys(copyPerson)
-console.log(keys) //['name', 'age', 'country', 'skills', 'address', 'getPersonInfo']
+// console.log(keys) //['name', 'age', 'country', 'skills', 'address', 'getPersonInfo']
 const address = Object.keys(copyPerson.address)
-console.log(address) //['street', 'pobox', 'city']
+// console.log(address) //['street', 'pobox', 'city']
 
 //fullName function
 const  favour = getFullName = (first_name, last_name) => {
     return `${first_name} ${last_name}`;
 };
 
-console.log(favour("lois", "presh"))
+// console.log(favour("lois", "presh"))
 
 //addition
 const addition = (a , b)=>{
     let sum= a * b;
     return sum;
 }
-console.log(addition(5,9))
+// console.log(addition(5,9))
 
 // Area of a circle
 const AreaOfACircle = (radius)=> {
@@ -131,7 +131,7 @@ const AreaOfACircle = (radius)=> {
 return area;
 }
 
-console.log(AreaOfACircle(20))
+// console.log(AreaOfACircle(20))
 
 //temperature converter  (32°F − 32) × 5/9 = 0°C
 const temperatureConverterCelsiusToFahrenheit = (oF) =>{
@@ -139,14 +139,14 @@ const temperatureConverterCelsiusToFahrenheit = (oF) =>{
     return oC;
 }
 
-console.log(temperatureConverterCelsiusToFahrenheit(25))
+// console.log(temperatureConverterCelsiusToFahrenheit(25))
 
 const temperatureConverterFahrenheitToCelsius = (oC) =>{
     let oF = (oC * 9/5) + 32
     return oF;
 }
 
-console.log(temperatureConverterFahrenheitToCelsius(25))
+// console.log(temperatureConverterFahrenheitToCelsius(25))
 
 //Body mass index(BMI)
 const bmi = (weight, height) => {
@@ -165,4 +165,28 @@ const bmi = (weight, height) => {
         return `${'You are Obese'}`
 }
 
-console.log(bmi(52, 5.7))
+// console.log(bmi(52, 5.7))
+
+/*
+spring runs from March 1 to May 31;
+summer runs from June 1 to August 31;
+fall (autumn) runs from September 1 to November 30; and
+winter runs from December 1 to February 28 (February 29 in a leap year).
+ */
+
+const checkSeason = (month) => {
+        if(month === 'December' || month === 'January' || month === 'February'){
+            return `${'The current season of the year is winter'}`
+        }else
+        if(month === 'March' || month === 'April' || month === 'May'){
+            return `${'The current season of the year is spring'}`
+        }else
+        if(month === 'June' || month === 'July' || month === 'August'){
+            return `${'The current season of the year is summer'}`
+        }else
+        if(month === 'September' || month === 'October' || month === 'November'){
+            return `${'The current season of the year is spring'}`
+        }
+  }
+
+console.log(checkSeason('January'))
