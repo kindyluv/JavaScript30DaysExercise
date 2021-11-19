@@ -19,12 +19,12 @@ const persons = {
     },
     'phoneNumber': '+123456789',
 }
-// console.log(persons.firstName + ' ' + persons.lastName)
-// console.log(persons.age)
-// console.log(persons.country)
-// console.log(persons.city)
-// console.log(persons.phoneNumber)
-// console.log(persons.getFullName())
+console.log(persons.firstName + ' ' + persons.lastName)
+console.log(persons.age)
+console.log(persons.country)
+console.log(persons.city)
+console.log(persons.phoneNumber)
+console.log(persons.getFullName())
 
 persons.nationality = 'Ethiopian'
 persons.country = 'Finland'
@@ -73,8 +73,8 @@ personz.getPersonInfo = function () {
     let statement = `${fullName} is a ${this.title}.\nHe lives in ${this.country}.\nHe teaches ${skills}.`
     return statement
 }
-// console.log(personz)
-// console.log(personz.getPersonInfo())
+console.log(personz)
+console.log(personz.getPersonInfo())
 /*Asabeneh Yetayeh is a teacher.
     He lives in Finland.
     He teaches HTML, CSS, JavaScript, React, Node, MongoDB, Python, D3.js, Meteor, and SasS.
@@ -104,26 +104,26 @@ const person = {
 //hasOwnProperty
 
 const copyPerson = Object.assign({}, person)
-// console.log('copy',copyPerson)
+console.log('copy',copyPerson)
 
 const keys = Object.keys(copyPerson)
-// console.log(keys) //['name', 'age', 'country', 'skills', 'address', 'getPersonInfo']
+console.log(keys) //['name', 'age', 'country', 'skills', 'address', 'getPersonInfo']
 const address = Object.keys(copyPerson.address)
-// console.log(address) //['street', 'pobox', 'city']
+console.log(address) //['street', 'pobox', 'city']
 
 //fullName function
 const  favour = getFullName = (first_name, last_name) => {
     return `${first_name} ${last_name}`;
 };
 
-// console.log(favour("lois", "presh"))
+console.log(favour("lois", "presh"))
 
 //addition
 const addition = (a , b)=>{
     let sum= a * b;
     return sum;
 }
-// console.log(addition(5,9))
+console.log(addition(5,9))
 
 // Area of a circle
 const AreaOfACircle = (radius)=> {
@@ -131,7 +131,7 @@ const AreaOfACircle = (radius)=> {
 return area;
 }
 
-// console.log(AreaOfACircle(20))
+console.log(AreaOfACircle(20))
 
 //temperature converter  (32°F − 32) × 5/9 = 0°C
 const temperatureConverterCelsiusToFahrenheit = (oF) =>{
@@ -139,14 +139,14 @@ const temperatureConverterCelsiusToFahrenheit = (oF) =>{
     return oC;
 }
 
-// console.log(temperatureConverterCelsiusToFahrenheit(25))
+console.log(temperatureConverterCelsiusToFahrenheit(25))
 
 const temperatureConverterFahrenheitToCelsius = (oC) =>{
     let oF = (oC * 9/5) + 32
     return oF;
 }
 
-// console.log(temperatureConverterFahrenheitToCelsius(25))
+console.log(temperatureConverterFahrenheitToCelsius(25))
 
 //Body mass index(BMI)
 const bmi = (weight, height) => {
@@ -165,7 +165,7 @@ const bmi = (weight, height) => {
         return `${'You are Obese'}`
 }
 
-// console.log(bmi(52, 5.7))
+console.log(bmi(52, 5.7))
 
 /*
 spring runs from March 1 to May 31;
@@ -190,3 +190,64 @@ const checkSeason = (month) => {
   }
 
 console.log(checkSeason('January'))
+
+function printArray(...list) {
+   for(const lists in list){
+      console.log(list.slice(0, -1))
+   }
+}
+
+const skills = [
+    'HTML',
+    'CSS',
+    'JavaScript',
+    'React',
+    'Node',
+    'MongoDB',
+    'Python',     
+    'D3.js',
+];
+
+printArray(skills.slice(0, 2))
+
+const shuffleArray = (list) => {
+  let emptyArray;
+    emptyArray = Math.floor(Math.random() * list)
+    return emptyArray;
+}
+console.log(shuffleArray(skills));
+
+//factorial
+
+const factorial = (num) =>{
+    let sum = 1;
+    for(let i = num; i > 0; i--){
+       sum *= i
+    }
+    return sum;
+}
+
+console.log(factorial(4))
+
+const isEmptyFunction = (listIsEmpty) => {
+    if(listIsEmpty > 0){
+      return false;
+    }else
+        return true;
+}
+console.log('Is Container Empty ?',isEmptyFunction(0))
+
+const average = (list) =>{
+    let sum = 0;
+    let average;
+    for (let i = 0; i < list.length; i++) {
+        sum += list[i];
+    }
+    average = sum/2;
+    return average;
+}
+
+const array = [21,30,60,44,27,19,48,14,23]
+console.log(average(array));
+
+ 
