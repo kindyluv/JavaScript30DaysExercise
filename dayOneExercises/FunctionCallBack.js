@@ -69,3 +69,46 @@ console.log(width, height)
 
 let { width: w, height: h} = rectangle
 console.log(w, h)
+
+const props = {
+    user:{
+        firstName:'Asabeneh',
+        lastName:'Yetayeh',
+        age:250
+    },
+    post:{
+        title:'Destructuring and Spread',
+        subtitle:'ES6',
+        year:2020
+    },
+    skills:['JS', 'React', 'Redux', 'Node', 'Python']
+}
+
+const {user, post, skills} = props
+const {firstName, lastName, age} = user
+console.log(firstName, lastName,age)
+const {title, subtitle, year} = post
+console.log(title, subtitle, year)
+const [skillOne, skillTwo, skillThree, skillFour, skillFive] = skills
+console.log(skillOne, skillTwo, skillThree, skillFour, skillFive)
+
+const prop = {
+    user:{
+        firstName1:'Asabeneh',
+        lastName1:'Yetayeh',
+        age1:250
+    },
+    post:{
+        title1:'Destructuring and Spread',
+        subtitle1:'ES6',
+        year1:2020
+    },
+    skills:['JS', 'React', 'Redux', 'Node', 'Python']
+
+}
+
+const {user:{firstName1, lastName1, age1}, post:{title1, subtitle1, year1}, skills:[skill1, skill2, skill3, skill4, skill5]} = prop
+console.log(firstName1,lastName1, age1)
+console.log(title1, subtitle1,year1)
+console.log(skill1, skill2, skill3, skill4, skill5)
+
