@@ -119,12 +119,36 @@ const  favour = getFullName = (first_name, last_name) => {
 console.log(favour("lois", "presh"))
 
 //addition
-const addition = function (a , b){
-    return a * b;
+const addition = (a , b)=>{
+    let sum= a * b;
+    return sum;
 }
-console.log(addition())
+console.log(addition(5,9))
 
 // Area of a circle
-const AreaOfACircle = ()=>{
+const AreaOfACircle = (radius)=> {
+    let area = Math.PI * (radius * radius)
+return area;
+}
 
+console.log(AreaOfACircle(20))
+
+//temperature converter  (32°F − 32) × 5/9 = 0°C
+const temperatureConverterCelsiusToFahrenheit = (oF) =>{
+    let oC = (32*oF - 32) * 5/9
+    return oC;
+}
+
+console.log(temperatureConverterCelsiusToFahrenheit(25))
+
+const temperatureConverterFahrenheitToCelsius = (oC) =>{
+    let oF = (oC * 9/5) + 32
+    return oF;
+}
+
+console.log(temperatureConverterFahrenheitToCelsius(25))
+
+//Body mass index(BMI)
+const bmi = (weight, height) => {
+    let bmi = weight / (height * height)
 }
