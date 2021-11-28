@@ -179,50 +179,104 @@ console.log(newCountries) // ["Finland", "Estonia", "Sweden", "Norway"]
 const products = [
     { product_: 'banana', price: 3 },
     { product_: 'mango', price: 6 },
-    { product_: 'potato', price: 0 },
+    { product_: 'potato', price: ' ' },
     { product_: 'avocado', price: 8 },
     { product_: 'coffee', price: 10 },
-    { product_: 'tea', price: 0 },
+    { product_: 'tea', price: ' ' },
 ]
     for(const{product_, price} of products){
         console.log(`The price of ${product_} is ${price} euros.`);
     }
+    //Calculate the sum of all the prices using forEach
+let sum = 0
+ products.forEach((values) => {
+     let x = values.price
+     sum += x
+ }
+)
+console.log(sum)
 
-    let sum2 = 0
-for({price} of products){
-    sum2 = sum2 + price
-}
-console.log(sum2);
+//Create an array of prices using map and store it in a variable prices
+let priceArray = products.map((values => values.price));
+console.log(priceArray)
+//     let sum2 = 0
+// for({price} of products){
+//     sum2 = sum2 + price
+// }
+// console.log(sum2);
+//
+// const countri = ['Finland', 'Estonia', 'Sweden', 'Norway']
+// countri.forEach(function (country, index, arr) {
+//     console.log(index, country.toUpperCase())
+// })
+// // const array = [1, 2, 3, 4, 5]
+// //
+// // function callbacks(item, i) {
+// //     return i;
+// // }
+// //
+// // const modifiedArrays = array.map(callbacks)
+// // console.log(modifiedArrays)
+// //
+// // // or syntax in an arrow function
+// //
+// // const callback = (item, i) => {
+// //     return i;
+// // }
+// // const modifiedArray = array.map(callback)
+// // console.log(modifiedArray)
+// // // prices_array = array.map(amount)
+// // // console.log(prices_array)
+// // const amounts = products.price;
+// // const ans = products.map(products.price)
+//
+// // console.log(ans)
+// let product_array = [];
+// for(let{product_, price} of products) {
+//     product_array.push(product_)
+//     product_array.push(price)
+// }
+// console.log(product_array)
+// Filter products with prices
+products.filter((values) => {
+    console.log(values.price)
+} )
+//Use method chaining to get the sum of the prices(map, filter, reduce)
+const product = products.filter((values => values.price))
+                        .map((values => values.price))
+                        // .reduce((values=> values.price));
 
-const countri = ['Finland', 'Estonia', 'Sweden', 'Norway']
-countri.forEach(function (country, index, arr) {
-    console.log(index, country.toUpperCase())
+console.log(product)
+
+//Calculate the sum of all the prices using reduce only
+// let sums=0
+//     products.reduce((values)=>{
+//         let x = values.price
+//         sums +=x
+//     } )
+// console.log(sums)
+
+//Find the first product which doesn't have a price value
+products.forEach((values)=>{
+    if(values.price === ' '){
+        console.log(`The price of ${values.product_} is ${values.price} euros.`);
+    }
 })
-// const array = [1, 2, 3, 4, 5]
-//
-// function callbacks(item, i) {
-//     return i;
-// }
-//
-// const modifiedArrays = array.map(callbacks)
-// console.log(modifiedArrays)
-//
-// // or syntax in an arrow function
-//
-// const callback = (item, i) => {
-//     return i;
-// }
-// const modifiedArray = array.map(callback)
-// console.log(modifiedArray)
-// // prices_array = array.map(amount)
-// // console.log(prices_array)
-// const amounts = products.price;
-// const ans = products.map(products.price)
 
-// console.log(ans)
-let product_array = [];
-for(let{product_, price} of products) {
-    product_array.push(product_)
-    product_array.push(price)
-}
-console.log(product_array)
+//Find the index of the first product which does not have price value
+products.forEach((values,i)=>{
+    if(values.price === ' '){
+        console.log(i,values.price)
+        // console.log(`The price of ${values.product_} is ${values.price} euros.`);
+    }
+})
+
+//Check if some products do not have a price value
+const value = products.some((values=>values.price===' '))
+console.log(value)
+
+//Check if all the products have price value
+const valuex = products.every((values=>(typeof values.price==='number')))
+console.log(valuex)
+
+//
