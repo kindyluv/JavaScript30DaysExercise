@@ -112,3 +112,117 @@ console.log(firstName1,lastName1, age1)
 console.log(title1, subtitle1,year1)
 console.log(skill1, skill2, skill3, skill4, skill5)
 
+//destructuring an array while looping
+const languages = [
+    { lang: 'English', count: 91 },
+    { lang: 'French', count: 45 },
+    { lang: 'Arabic', count: 25 },
+    { lang: 'Spanish', count: 24 },
+    { lang: 'Russian', count: 9 },
+    { lang: 'Portuguese', count: 9 },
+    { lang: 'Dutch', count: 8 },
+    { lang: 'German', count: 7 },
+    { lang: 'Chinese', count: 5 },
+    { lang: 'Swahili', count: 4 },
+    { lang: 'Serbian', count: 4 },
+]
+
+for (const { lang, count } of languages) {
+    console.log(`The ${lang} is spoken in ${count} countries.`)
+}
+
+const rectangles = { width: 20, height: 10 }
+const calculateArea = ({ width, height }) => width * height
+const calculatePerimeter = ({ width, height } = 2 * (width + height))
+
+
+const person = {
+    firstName2: 'Asabeneh',
+    lastName2: 'Yetayeh',
+    age2: 250,
+    country2: 'Finland',
+    job2: 'Instructor and Developer',
+    skills2: [
+        'HTML',
+        'CSS',
+        'JavaScript',
+        'React',
+        'Redux',
+        'Node',
+        'MongoDB',
+        'Python',
+        'D3.js',
+    ],
+    languages2: ['Amharic', 'English', 'Suomi(Finnish)'],
+}
+const values = person.skills2
+values.forEach((value, i) => console.log(i, value.toUpperCase()))
+
+   const {...list} = person
+    console.log(list)
+    const {...Skills} = person.skills2
+    console.log(Skills)
+    const {...lang} = person.languages2
+    console.log(lang)
+
+
+//forEach loop
+const country = ['Finland', 'Estonia', 'Sweden', 'Norway']
+country.forEach((value, i) => console.log(i, value.toUpperCase()))
+
+const count = ['Finland', 'Estonia', 'Sweden', 'Norway']
+const newCountries = []
+count.forEach((country) => newCountries.push(country.toUpperCase()))
+
+console.log(newCountries) // ["Finland", "Estonia", "Sweden", "Norway"]
+
+const products = [
+    { product_: 'banana', price: 3 },
+    { product_: 'mango', price: 6 },
+    { product_: 'potato', price: 0 },
+    { product_: 'avocado', price: 8 },
+    { product_: 'coffee', price: 10 },
+    { product_: 'tea', price: 0 },
+]
+    for(const{product_, price} of products){
+        console.log(`The price of ${product_} is ${price} euros.`);
+    }
+
+    let sum2 = 0
+for({price} of products){
+    sum2 = sum2 + price
+}
+console.log(sum2);
+
+const countri = ['Finland', 'Estonia', 'Sweden', 'Norway']
+countri.forEach(function (country, index, arr) {
+    console.log(index, country.toUpperCase())
+})
+// const array = [1, 2, 3, 4, 5]
+//
+// function callbacks(item, i) {
+//     return i;
+// }
+//
+// const modifiedArrays = array.map(callbacks)
+// console.log(modifiedArrays)
+//
+// // or syntax in an arrow function
+//
+// const callback = (item, i) => {
+//     return i;
+// }
+// const modifiedArray = array.map(callback)
+// console.log(modifiedArray)
+// // prices_array = array.map(amount)
+// // console.log(prices_array)
+// const amounts = products.price;
+// const ans = products.map(products.price)
+
+// console.log(ans)
+let product_array = [];
+for(let{product_, price} of products) {
+    product_array.push(product_)
+    product_array.push(price)
+}
+console.log(product_array)
